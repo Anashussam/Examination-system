@@ -5163,11 +5163,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anas Qadora\\Desktop\\APIs\\OnlineExamSystem\\OnlineExamSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\OnlineExamSystem.csproj",
       "projectName": "OnlineExamSystem",
-      "projectPath": "C:\\Users\\Anas Qadora\\Desktop\\APIs\\OnlineExamSystem\\OnlineExamSystem.csproj",
+      "projectPath": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\OnlineExamSystem.csproj",
       "packagesPath": "C:\\Users\\Anas Qadora\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anas Qadora\\Desktop\\APIs\\OnlineExamSystem\\obj\\",
+      "outputPath": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

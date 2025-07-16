@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineExamSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+571cdb68d491ce0480529e50974f8d2550de1938")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46c5154356a6af59ef44a2d79afeb098a613d9bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineExamSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineExamSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
