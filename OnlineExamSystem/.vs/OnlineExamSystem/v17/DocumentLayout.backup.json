@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|c:\\users\\anas qadora\\desktop\\examination system\\onlineexamsystem\\data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|solutionrelative:data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|c:\\users\\anas qadora\\desktop\\examination system\\onlineexamsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|c:\\users\\anas qadora\\desktop\\examination system\\onlineexamsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,16 +15,8 @@
       "RelativeMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|solutionrelative:business logic\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|c:\\users\\anas qadora\\desktop\\examination system\\onlineexamsystem\\data\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|solutionrelative:data\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|c:\\users\\anas qadora\\desktop\\examination system\\onlineexamsystem\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|solutionrelative:models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|c:\\users\\anas qadora\\desktop\\examination system\\onlineexamsystem\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|solutionrelative:models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|c:\\users\\anas qadora\\desktop\\examination system\\onlineexamsystem\\controllers\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EB4889-CF73-40C7-812C-30803D97BBFB}|OnlineExamSystem.csproj|solutionrelative:controllers\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:22:57.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAywBIAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T20:09:19.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Business Logic\\UserService.cs",
-              "RelativeDocumentMoniker": "Business Logic\\UserService.cs",
-              "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Business Logic\\UserService.cs",
-              "RelativeToolTip": "Business Logic\\UserService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA5wA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:42:07.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Business Logic\\IUserService.cs",
               "RelativeDocumentMoniker": "Business Logic\\IUserService.cs",
               "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Business Logic\\IUserService.cs",
               "RelativeToolTip": "Business Logic\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:40:37.831Z",
+              "WhenOpened": "2025-07-24T15:09:23.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Business Logic\\UserService.cs",
+              "RelativeDocumentMoniker": "Business Logic\\UserService.cs",
+              "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Business Logic\\UserService.cs",
+              "RelativeToolTip": "Business Logic\\UserService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAowBEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T14:52:44.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OperationResult.cs",
+              "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Controllers\\OperationResult.cs",
+              "RelativeDocumentMoniker": "Controllers\\OperationResult.cs",
+              "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Controllers\\OperationResult.cs",
+              "RelativeToolTip": "Controllers\\OperationResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T14:49:34.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Data\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Data\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Data\\UserRepository.cs",
-              "RelativeToolTip": "Data\\UserRepository.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAkwAoAAAAfAAAAAAAAAA==",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Controllers\\AuthController.cs*",
+              "RelativeToolTip": "Controllers\\AuthController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:23:11.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Data\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Data\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Data\\IUserRepository.cs",
-              "RelativeToolTip": "Data\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:19:15.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Models\\LoginModel.cs",
-              "RelativeDocumentMoniker": "Models\\LoginModel.cs",
-              "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Models\\LoginModel.cs",
-              "RelativeToolTip": "Models\\LoginModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:17:37.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RegisterModel.cs",
-              "DocumentMoniker": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Models\\RegisterModel.cs",
-              "RelativeDocumentMoniker": "Models\\RegisterModel.cs",
-              "ToolTip": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\Models\\RegisterModel.cs",
-              "RelativeToolTip": "Models\\RegisterModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T19:13:46.058Z",
+              "WhenOpened": "2025-07-24T14:41:13.156Z",
               "EditorCaption": ""
             }
           ]

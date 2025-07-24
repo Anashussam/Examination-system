@@ -4,7 +4,9 @@ using OnlineExamSystem.Models;
 
 namespace OnlineExamSystem.Controllers
 {
-    [Route("api/[controller]")]
+  //  [Route("api/[controller]")]
+    [Route("api/ExamSystem")]
+
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -16,30 +18,49 @@ namespace OnlineExamSystem.Controllers
         }
 
         [HttpPost("register")]
+   
         public IActionResult Register([FromBody] RegisterModel model)
         {
-            var result = _userService.Register(model);
-            if (!result)
-                return BadRequest("Email alredy exists");
-
-            return Ok("User registerd susscessfuly");
+            try
+            {
+                var result = _userService.Register(model);
+                return StatusCode(result.StatusCode, result.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error: " + ex.Message);
+            }
         }
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginModel model)
         {
-            var user = _userService.Login(model);
-            if (user == null)
-                return Unauthorized("Invalid email or password ");
 
-            return Ok(new
+
+            try
             {
-                user.UserID,
-                user.Name,
-                user.Email,
-                Role = user.Role?.RoleName
+                var user = _userService.Login(model);
+                if (user == null)
+                    return Unauthorized("Invalid email or password ");
 
-            });
+                return Ok(new
+                {
+                    user.UserID,
+                    user.Name,
+                    user.Email,
+                    Role = user.Role?.RoleName
+
+                });
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(500, "Internal server error: " + ex.Message);
+
+            }
+
+
+
+
         }
     }
 }

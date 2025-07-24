@@ -2,7 +2,7 @@
   {
     "ContainingType": "OnlineExamSystem.Controllers.AuthController",
     "Method": "Login",
-    "RelativePath": "api/Auth/login",
+    "RelativePath": "api/ExamSystem/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +18,7 @@
   {
     "ContainingType": "OnlineExamSystem.Controllers.AuthController",
     "Method": "Register",
-    "RelativePath": "api/Auth/register",
+    "RelativePath": "api/ExamSystem/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
