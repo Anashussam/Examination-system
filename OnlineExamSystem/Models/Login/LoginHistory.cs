@@ -1,4 +1,6 @@
-﻿namespace OnlineExamSystem.Models
+﻿using OnlineExamSystem.Models.Exams;
+
+namespace OnlineExamSystem.Models.Login
 {
     public class LoginHistory
     {

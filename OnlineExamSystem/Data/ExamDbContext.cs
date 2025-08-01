@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OnlineExamSystem.Models;
+using OnlineExamSystem.Models.Subjects;
+
+using OnlineExamSystem.Models.Exams;
+using OnlineExamSystem.Models.Login;
 
 namespace OnlineExamSystem.Data
 {
@@ -11,7 +14,7 @@ namespace OnlineExamSystem.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Subject> Subjects { get; set; }
-        public DbSet<Exams> Exams { get; set; }
+        public DbSet<Exam> Exams { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Option> Options { get; set; }
         public DbSet<ExamSession> ExamSessions { get; set; }
@@ -34,7 +37,7 @@ namespace OnlineExamSystem.Data
                 .HasKey(r => r.RoleId);
             modelBuilder.Entity<Subject>()
                 .HasKey(s => s.SubjectID);
-            modelBuilder.Entity<Exams>()
+            modelBuilder.Entity<Exam>()
                 .HasKey(e => e.ExamID);
             modelBuilder.Entity<Question>()
                 .HasKey(q => q.QuestionID);
@@ -61,7 +64,7 @@ namespace OnlineExamSystem.Data
 
             // Exam and Subject relationship
 
-            modelBuilder.Entity<Exams>()
+            modelBuilder.Entity<Exam>()
                  .HasOne(e => e.Subject)
                  .WithMany()
                  .HasForeignKey(e => e.SubjectID)
@@ -69,7 +72,7 @@ namespace OnlineExamSystem.Data
 
 
             // Exam and User (CreatedBy) relationship
-            modelBuilder.Entity<Exams>()
+            modelBuilder.Entity<Exam>()
                 .HasOne(e => e.CreatedByUser)
                 .WithMany()
                 .HasForeignKey(e => e.CreatedBy)
@@ -78,7 +81,7 @@ namespace OnlineExamSystem.Data
 
             // Question and Exam relationship
             modelBuilder.Entity<Question>()
-                .HasOne(q => q.Exam)
+                .HasOne(q => q.Exams)
                 .WithMany()
                 .HasForeignKey(q => q.ExamID)
                 .OnDelete(DeleteBehavior.Restrict);
@@ -89,7 +92,7 @@ namespace OnlineExamSystem.Data
                 .WithMany()
                 .HasForeignKey(o => o.QuestionID)
                 .OnDelete(DeleteBehavior.Restrict);
-            // ExamSession and Exams relationship
+            // ExamSession and Exam relationship
             modelBuilder.Entity<ExamSession>()
                 .HasOne(es => es.Exams)
                 .WithMany()
@@ -133,7 +136,13 @@ namespace OnlineExamSystem.Data
                 .HasForeignKey(lh => lh.UserID)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            modelBuilder.Entity<Exam>()
+        .HasOne(e => e.Subject)
+        .WithMany(s => s.Exams)
+        .HasForeignKey(e => e.SubjectID)
+        .OnDelete(DeleteBehavior.Restrict);
 
+            base.OnModelCreating(modelBuilder);
         }
         
     }

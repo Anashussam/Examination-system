@@ -96,7 +96,7 @@ namespace OnlineExamSystem.Migrations
                     b.ToTable("ExamSessions");
                 });
 
-            modelBuilder.Entity("OnlineExamSystem.Models.Exams", b =>
+            modelBuilder.Entity("OnlineExamSystem.Models.Exam", b =>
                 {
                     b.Property<int>("ExamID")
                         .ValueGeneratedOnAdd()
@@ -134,7 +134,7 @@ namespace OnlineExamSystem.Migrations
 
                     b.HasIndex("SubjectID");
 
-                    b.ToTable("Exams");
+                    b.ToTable("Exam");
                 });
 
             modelBuilder.Entity("OnlineExamSystem.Models.LoginHistory", b =>
@@ -382,7 +382,7 @@ namespace OnlineExamSystem.Migrations
 
             modelBuilder.Entity("OnlineExamSystem.Models.ExamSession", b =>
                 {
-                    b.HasOne("OnlineExamSystem.Models.Exams", "Exams")
+                    b.HasOne("OnlineExamSystem.Models.Exam", "Exam")
                         .WithMany()
                         .HasForeignKey("ExamID")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -400,14 +400,14 @@ namespace OnlineExamSystem.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Exams");
+                    b.Navigation("Exam");
 
                     b.Navigation("Result");
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("OnlineExamSystem.Models.Exams", b =>
+            modelBuilder.Entity("OnlineExamSystem.Models.Exam", b =>
                 {
                     b.HasOne("OnlineExamSystem.Models.User", "CreatedByUser")
                         .WithMany()
@@ -458,7 +458,7 @@ namespace OnlineExamSystem.Migrations
 
             modelBuilder.Entity("OnlineExamSystem.Models.Question", b =>
                 {
-                    b.HasOne("OnlineExamSystem.Models.Exams", "Exam")
+                    b.HasOne("OnlineExamSystem.Models.Exam", "Exam")
                         .WithMany()
                         .HasForeignKey("ExamID")
                         .OnDelete(DeleteBehavior.Restrict)

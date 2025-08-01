@@ -8,10 +8,9 @@ public class ExamDbContextFactory : IDesignTimeDbContextFactory<ExamDbContext>
 {
     public ExamDbContext CreateDbContext(string[] args)
     {
-        // نقرأ الإعدادات من appsettings.json
+        
         var configuration = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory()) // مهم جداً
-            .AddJsonFile("appsettings.json")
+            .SetBasePath(Directory.GetCurrentDirectory()) 
             .Build();
 
         var optionsBuilder = new DbContextOptionsBuilder<ExamDbContext>();

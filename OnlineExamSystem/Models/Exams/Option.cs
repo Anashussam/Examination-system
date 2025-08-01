@@ -1,4 +1,4 @@
-﻿namespace OnlineExamSystem.Models
+﻿namespace OnlineExamSystem.Models.Exams
 {
     public class Option
     {

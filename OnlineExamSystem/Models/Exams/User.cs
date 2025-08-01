@@ -1,4 +1,6 @@
-﻿namespace OnlineExamSystem.Models
+﻿using OnlineExamSystem.Models.Login;
+using OnlineExamSystem.Models.Subjects; 
+namespace OnlineExamSystem.Models.Exams
 {
     public class User
     {

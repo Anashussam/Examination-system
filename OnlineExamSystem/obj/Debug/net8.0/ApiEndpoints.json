@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "OnlineExamSystem.Models.LoginModel",
+        "Type": "OnlineExamSystem.Models.Login.LoginModel",
         "IsRequired": true
       }
     ],
@@ -26,6 +26,85 @@
       {
         "Name": "model",
         "Type": "OnlineExamSystem.Models.RegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.SubjectsController",
+    "Method": "Delete",
+    "RelativePath": "api/Subjects/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.SubjectsController",
+    "Method": "Add",
+    "RelativePath": "api/Subjects/AddSubject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "OnlineExamSystem.Models.DTOs.Subjects.SubjectCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.SubjectsController",
+    "Method": "GetAllSubjects",
+    "RelativePath": "api/Subjects/GetAllSubjects",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.SubjectsController",
+    "Method": "GetById",
+    "RelativePath": "api/Subjects/GetSubjectById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.SubjectsController",
+    "Method": "Update",
+    "RelativePath": "api/Subjects/UpdateSubject/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "OnlineExamSystem.Models.DTOs.Subjects.SubjectUpdateDto",
         "IsRequired": true
       }
     ],

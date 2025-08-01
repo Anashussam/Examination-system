@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OnlineExamSystem.Business_Logic;
 using OnlineExamSystem.Models;
+using OnlineExamSystem.Models.Login;
+using OnlineExamSystem.Models.Subjects;
 
 namespace OnlineExamSystem.Controllers
 {

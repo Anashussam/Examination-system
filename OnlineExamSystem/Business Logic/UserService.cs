@@ -1,6 +1,8 @@
 ﻿using OnlineExamSystem.Controllers;
 using OnlineExamSystem.Data;
 using OnlineExamSystem.Models;
+using OnlineExamSystem.Models.Exams;
+using OnlineExamSystem.Models.Login;
 using System.Security.Cryptography;
 using System.Text;
 

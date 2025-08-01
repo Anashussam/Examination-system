@@ -1,4 +1,4 @@
-﻿namespace OnlineExamSystem.Models
+﻿namespace OnlineExamSystem.Models.Login
 {
     public class LoginModel
     {

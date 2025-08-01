@@ -1,5 +1,7 @@
 ﻿using OnlineExamSystem.Controllers;
 using OnlineExamSystem.Models;
+using OnlineExamSystem.Models.Exams;
+using OnlineExamSystem.Models.Login;
 
 namespace OnlineExamSystem.Business_Logic
 {

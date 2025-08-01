@@ -1,4 +1,4 @@
-﻿using OnlineExamSystem.Models;
+﻿using OnlineExamSystem.Models.Exams;
 
 namespace OnlineExamSystem.Data
 {

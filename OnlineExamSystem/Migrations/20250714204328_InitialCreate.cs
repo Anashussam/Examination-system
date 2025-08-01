@@ -106,7 +106,7 @@ namespace OnlineExamSystem.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Exams",
+                name: "Exam",
                 columns: table => new
                 {
                     ExamID = table.Column<int>(type: "int", nullable: false)
@@ -152,7 +152,7 @@ namespace OnlineExamSystem.Migrations
                     table.ForeignKey(
                         name: "FK_Questions_Exams_ExamID",
                         column: x => x.ExamID,
-                        principalTable: "Exams",
+                        principalTable: "Exam",
                         principalColumn: "ExamID",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -232,7 +232,7 @@ namespace OnlineExamSystem.Migrations
                     table.ForeignKey(
                         name: "FK_ExamSessions_Exams_ExamID",
                         column: x => x.ExamID,
-                        principalTable: "Exams",
+                        principalTable: "Exam",
                         principalColumn: "ExamID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -289,12 +289,12 @@ namespace OnlineExamSystem.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Exams_CreatedBy",
-                table: "Exams",
+                table: "Exam",
                 column: "CreatedBy");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Exams_SubjectID",
-                table: "Exams",
+                table: "Exam",
                 column: "SubjectID");
 
             migrationBuilder.CreateIndex(
@@ -404,7 +404,7 @@ namespace OnlineExamSystem.Migrations
                 name: "ExamSessions");
 
             migrationBuilder.DropTable(
-                name: "Exams");
+                name: "Exam");
 
             migrationBuilder.DropTable(
                 name: "Result");
