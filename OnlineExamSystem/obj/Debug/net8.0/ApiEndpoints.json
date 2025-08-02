@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "OnlineExamSystem.Controllers.ExamsController",
+    "Method": "AddExam",
+    "RelativePath": "AddExam",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "examCreateDto",
+        "Type": "OnlineExamSystem.Models.DTOs.Exams.ExamCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OnlineExamSystem.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/ExamSystem/login",
@@ -105,6 +121,48 @@
       {
         "Name": "dto",
         "Type": "OnlineExamSystem.Models.DTOs.Subjects.SubjectUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.ExamsController",
+    "Method": "DeleteExam",
+    "RelativePath": "DeleteExam/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.ExamsController",
+    "Method": "GetAllExams",
+    "RelativePath": "GetAllExams",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.ExamsController",
+    "Method": "GetExamById",
+    "RelativePath": "GetExamById/{examId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "examId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

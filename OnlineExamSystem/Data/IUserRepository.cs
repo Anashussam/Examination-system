@@ -6,6 +6,7 @@ namespace OnlineExamSystem.Data
     {
         User GetByEmail(string email);
         void AddUser(User user);
+        bool Exists(int id);
 
         User GetEmailAndPassword(string email, string password);
     }

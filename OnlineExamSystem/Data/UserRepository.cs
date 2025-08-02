@@ -26,5 +26,9 @@ namespace OnlineExamSystem.Data
         {
             return _Context.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
         }
+        public bool Exists(int id)
+        {
+            return _Context.Users.Any(u => u.UserID == id);
+        }
     }
 }

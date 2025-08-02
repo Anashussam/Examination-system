@@ -18,6 +18,10 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
 builder.Services.AddScoped<ISubjectService, SubjectService>();
 
+builder.Services.AddScoped<IExamService, ExamService>();
+builder.Services.AddScoped<IExamRepository, ExamRepository>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
