@@ -3,6 +3,7 @@ using OnlineExamSystem.Models.Subjects;
 
 using OnlineExamSystem.Models.Exams;
 using OnlineExamSystem.Models.Login;
+using OnlineExamSystem.Models.Questions;
 
 namespace OnlineExamSystem.Data
 {
@@ -78,13 +79,11 @@ namespace OnlineExamSystem.Data
                 .HasForeignKey(e => e.CreatedBy)
                 .OnDelete(DeleteBehavior.Restrict);
 
+         
 
-            // Question and Exam relationship
-            modelBuilder.Entity<Question>()
-                .HasOne(q => q.Exams)
-                .WithMany()
-                .HasForeignKey(q => q.ExamID)
-                .OnDelete(DeleteBehavior.Restrict);
+
+           
+
 
             // Option and Question relationship
             modelBuilder.Entity<Option>()
@@ -92,6 +91,9 @@ namespace OnlineExamSystem.Data
                 .WithMany()
                 .HasForeignKey(o => o.QuestionID)
                 .OnDelete(DeleteBehavior.Restrict);
+
+
+
             // ExamSession and Exam relationship
             modelBuilder.Entity<ExamSession>()
                 .HasOne(es => es.Exams)
@@ -143,7 +145,20 @@ namespace OnlineExamSystem.Data
         .OnDelete(DeleteBehavior.Restrict);
 
             base.OnModelCreating(modelBuilder);
+
+
+            modelBuilder.Entity<Question>()
+            .HasKey(q => q.QuestionID);
+
+            modelBuilder.Entity<Question>()
+                .HasOne(q => q.Exams)
+                .WithMany()
+                .HasForeignKey(q => q.ExamID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+
         }
-        
+
     }
 }

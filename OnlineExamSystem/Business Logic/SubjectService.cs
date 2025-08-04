@@ -30,7 +30,8 @@ namespace OnlineExamSystem.Business_Logic
                 return false;
 
             _subjectRepository.Add(subject);
-            return _subjectRepository.Save();
+            return true;
+          //  return _subjectRepository.SaveChanges();
 
         }
         public bool Update(Subject subject)

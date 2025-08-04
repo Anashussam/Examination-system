@@ -42,7 +42,7 @@ namespace OnlineExamSystem.Migrations
                     b.Property<int>("SessionID")
                         .HasColumnType("int");
 
-                    b.Property<int>("optionID")
+                    b.Property<int>("OptionID")
                         .HasColumnType("int");
 
                     b.HasKey("AnswerID");
@@ -53,7 +53,7 @@ namespace OnlineExamSystem.Migrations
 
                     b.HasIndex("SessionID");
 
-                    b.HasIndex("optionID");
+                    b.HasIndex("OptionID");
 
                     b.ToTable("Answers");
                 });
@@ -369,7 +369,7 @@ namespace OnlineExamSystem.Migrations
 
                     b.HasOne("OnlineExamSystem.Models.Option", "Option")
                         .WithMany()
-                        .HasForeignKey("optionID")
+                        .HasForeignKey("OptionID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

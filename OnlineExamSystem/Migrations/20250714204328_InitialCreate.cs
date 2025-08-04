@@ -275,7 +275,7 @@ namespace OnlineExamSystem.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Answers_optionID",
                 table: "Answers",
-                column: "optionID");
+                column: "OptionID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Answers_QuestionID",

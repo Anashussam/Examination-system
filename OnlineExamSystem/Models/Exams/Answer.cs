@@ -1,4 +1,6 @@
-﻿namespace OnlineExamSystem.Models.Exams
+﻿using OnlineExamSystem.Models.Questions;
+
+namespace OnlineExamSystem.Models.Exams
 {
     public class Answer
     {

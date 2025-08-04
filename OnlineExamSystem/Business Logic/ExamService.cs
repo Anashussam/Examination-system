@@ -31,7 +31,10 @@ namespace OnlineExamSystem.Business_Logic
                Description = dto.Description,
                Duration = dto.Duration,
                Diffficulty = dto.Diffficulty,
-               CreatedAt = DateTime.Now
+               CreatedAt = DateTime.Now,
+               Subject = dto.SubjectName != null ? _subjectRepository.GetById(dto.SubjectID) : null
+
+
 
            };
             _examRepository.Add(exam);
