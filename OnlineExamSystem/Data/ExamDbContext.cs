@@ -20,7 +20,8 @@ namespace OnlineExamSystem.Data
         public DbSet<Option> Options { get; set; }
         public DbSet<ExamSession> ExamSessions { get; set; }
         public DbSet<Answer> Answers { get; set; }
-        public Result Result { get; set; }
+        public DbSet<Result> Results { get; set; }
+      
 
         public DbSet<LoginHistory> LoginHistories { get; set; }
 
@@ -46,7 +47,7 @@ namespace OnlineExamSystem.Data
                 .HasKey(o => o.OptionID);
             modelBuilder.Entity<LoginHistory>()
                 .HasKey(lh => lh.LoginID);
-           
+
 
 
             // User and Roles relationship
@@ -54,14 +55,14 @@ namespace OnlineExamSystem.Data
                 .HasOne(u => u.Role)
                 .WithMany(r => r.Users)
                 .HasForeignKey(u => u.RoleID)
-                .OnDelete(DeleteBehavior.Restrict); 
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Subject ↔ User (CreatedBy)
             modelBuilder.Entity<Subject>()
                 .HasOne(s => s.createdByUser)
                 .WithMany()
                 .HasForeignKey(s => s.CreatedBy)
-                .OnDelete(DeleteBehavior.Restrict); 
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Exam and Subject relationship
 
@@ -69,7 +70,7 @@ namespace OnlineExamSystem.Data
                  .HasOne(e => e.Subject)
                  .WithMany()
                  .HasForeignKey(e => e.SubjectID)
-                 .OnDelete(DeleteBehavior.Restrict);  
+                 .OnDelete(DeleteBehavior.Restrict);
 
 
             // Exam and User (CreatedBy) relationship
@@ -78,12 +79,6 @@ namespace OnlineExamSystem.Data
                 .WithMany()
                 .HasForeignKey(e => e.CreatedBy)
                 .OnDelete(DeleteBehavior.Restrict);
-
-         
-
-
-           
-
 
             // Option and Question relationship
             modelBuilder.Entity<Option>()
@@ -107,30 +102,30 @@ namespace OnlineExamSystem.Data
                 .HasForeignKey(es => es.UserID)
                 .OnDelete(DeleteBehavior.Restrict);
             // Answer and ExamSession relationship
-            modelBuilder.Entity<Answer>()
-                .HasOne(a => a.ExamSession)
-                .WithMany()
-                .HasForeignKey(a => a.SessionID)
-                .OnDelete(DeleteBehavior.Restrict);
+            //modelBuilder.Entity<Answer>()
+            //    .HasOne(a => a.ExamSession)
+            //    .WithMany()
+            //    .HasForeignKey(a => a.SessionID)
+            //    .OnDelete(DeleteBehavior.Restrict);
 
             // Answer and Question relationship
-            modelBuilder.Entity<Answer>()
-                .HasOne(a => a.Question)
-                .WithMany()
-                .HasForeignKey(a => a.QuestionID)
-                .OnDelete(DeleteBehavior.Restrict);
-            // Answer and Option relationship   
-            modelBuilder.Entity<Answer>()
-                .HasOne(a => a.Option)
-                .WithMany()
-                .HasForeignKey(a => a.optionID)
-                .OnDelete(DeleteBehavior.Restrict);
+            //modelBuilder.Entity<Answer>()
+            //    .HasOne(a => a.Question)
+            //    .WithMany()
+            //    .HasForeignKey(a => a.QuestionID)
+            //    .OnDelete(DeleteBehavior.Restrict);
+            //// Answer and Option relationship   
+            //modelBuilder.Entity<Answer>()
+            //    .HasOne(a => a.Option)
+            //    .WithMany()
+            //    .HasForeignKey(a => a.OptionID)
+            //    .OnDelete(DeleteBehavior.Restrict);
             // Result and ExamSession relationship
-            modelBuilder.Entity<Result>()
-                .HasOne(r => r.Session)
-                .WithMany()
-                .HasForeignKey(r => r.SessionID)
-                .OnDelete(DeleteBehavior.Restrict);
+            //modelBuilder.Entity<Result>()
+            //    .HasOne(r => r.Session)
+            //    .WithMany()
+            //    .HasForeignKey(r => r.SessionID)
+            //    .OnDelete(DeleteBehavior.Restrict);
             //LoginHistory and User relationship
             modelBuilder.Entity<LoginHistory>()
                 .HasOne(lh => lh.User)
@@ -155,6 +150,23 @@ namespace OnlineExamSystem.Data
                 .WithMany()
                 .HasForeignKey(q => q.ExamID)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            ///
+
+            modelBuilder.Entity<Answer>(entity =>
+            {
+                entity.HasKey(a => a.AnswerID);
+
+                entity.HasOne(a => a.Question)
+                      .WithMany()
+                      .HasForeignKey(a => a.QuestionID)
+                      .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(a => a.Option)
+                      .WithMany()
+                      .HasForeignKey(a => a.OptionID)
+                      .OnDelete(DeleteBehavior.Restrict);
+            });
 
 
 

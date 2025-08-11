@@ -21,6 +21,11 @@ builder.Services.AddScoped<IExamService, ExamService>();
 builder.Services.AddScoped<IExamRepository, ExamRepository>();
 builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
 builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IOptionService, OptionService>();
+//builder.Services.AddScoped<IExamSessionRepository, ExamSessionRepository>();
+//builder.Services.AddScoped<IExamSessionService, ExamSessionService>();
+builder.Services.AddScoped<IAnswerRepository, AnswerRepository>();
+builder.Services.AddScoped<AnswerService>();
 
 var app = builder.Build();
 

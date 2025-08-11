@@ -13,6 +13,7 @@ namespace OnlineExamSystem.Models.Questions
 
         public int QuestionID { get; set; }
 
+        [Required]
         public string OptionText { get; set; }
         public bool IsCorrect { get; set; }
 

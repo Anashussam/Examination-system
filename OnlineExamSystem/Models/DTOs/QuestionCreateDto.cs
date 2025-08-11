@@ -7,9 +7,5 @@
         public int Marks { get; set; } 
         //public List<OptionDto> Options { get; set; } 
     }
-    public class OptionDto
-    {
-        public string Text { get; set; }
-        public bool IsCorrect { get; set; }
-    }
+   
 }

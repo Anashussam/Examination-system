@@ -8,16 +8,18 @@ public class ExamDbContextFactory : IDesignTimeDbContextFactory<ExamDbContext>
 {
     public ExamDbContext CreateDbContext(string[] args)
     {
-        
-        var configuration = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory()) 
+        // بناء Configuration
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory()) // تأكد من مسار المشروع
+            .AddJsonFile("appsettings.json")
             .Build();
 
-        var optionsBuilder = new DbContextOptionsBuilder<ExamDbContext>();
+        var builder = new DbContextOptionsBuilder<ExamDbContext>();
+
         var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-        optionsBuilder.UseSqlServer(connectionString);
+        builder.UseSqlServer(connectionString);
 
-        return new ExamDbContext(optionsBuilder.Options);
+        return new ExamDbContext(builder.Options);
     }
 }
