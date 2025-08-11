@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OnlineExamSystem.Models.Subjects;
-
 using OnlineExamSystem.Models.Exams;
 using OnlineExamSystem.Models.Login;
 using OnlineExamSystem.Models.Questions;
@@ -20,7 +19,7 @@ namespace OnlineExamSystem.Data
         public DbSet<Option> Options { get; set; }
         public DbSet<ExamSession> ExamSessions { get; set; }
         public DbSet<Answer> Answers { get; set; }
-        public DbSet<Result> Results { get; set; }
+        public DbSet<Result> Result { get; set; }
       
 
         public DbSet<LoginHistory> LoginHistories { get; set; }
@@ -89,18 +88,18 @@ namespace OnlineExamSystem.Data
 
 
 
-            // ExamSession and Exam relationship
-            modelBuilder.Entity<ExamSession>()
-                .HasOne(es => es.Exams)
-                .WithMany()
-                .HasForeignKey(es => es.ExamID)
-                .OnDelete(DeleteBehavior.Restrict);
-            // ExamSession and User relationship
-            modelBuilder.Entity<ExamSession>()
-                .HasOne(es => es.User)
-                .WithMany()
-                .HasForeignKey(es => es.UserID)
-                .OnDelete(DeleteBehavior.Restrict);
+            //// ExamSession and Exam relationship
+            //modelBuilder.Entity<ExamSession>()
+            //    .HasOne(es => es.Exams)
+            //    .WithMany()
+            //    .HasForeignKey(es => es.ExamID)
+            //    .OnDelete(DeleteBehavior.Restrict);
+            //// ExamSession and User relationship
+            //modelBuilder.Entity<ExamSession>()
+            //    .HasOne(es => es.User)
+            //    .WithMany()
+            //    .HasForeignKey(es => es.UserID)
+            //    .OnDelete(DeleteBehavior.Restrict);
             // Answer and ExamSession relationship
             //modelBuilder.Entity<Answer>()
             //    .HasOne(a => a.ExamSession)
@@ -168,6 +167,7 @@ namespace OnlineExamSystem.Data
                       .OnDelete(DeleteBehavior.Restrict);
             });
 
+         
 
 
         }

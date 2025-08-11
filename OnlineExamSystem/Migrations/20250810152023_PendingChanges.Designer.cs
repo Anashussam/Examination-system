@@ -150,7 +150,7 @@ namespace OnlineExamSystem.Migrations
 
                     b.HasKey("ResultID");
 
-                    b.ToTable("Results");
+                    b.ToTable("Result");
                 });
 
             modelBuilder.Entity("OnlineExamSystem.Models.Exams.Roles", b =>

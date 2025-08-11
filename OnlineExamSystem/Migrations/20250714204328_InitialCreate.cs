@@ -259,12 +259,12 @@ namespace OnlineExamSystem.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Result", x => x.ResultID);
-                    table.ForeignKey(
-                        name: "FK_Result_ExamSessions_SessionID",
-                        column: x => x.SessionID,
-                        principalTable: "ExamSessions",
-                        principalColumn: "SessionID",
-                        onDelete: ReferentialAction.Restrict);
+                    //table.ForeignKey(
+                    //    name: "FK_Result_ExamSessions_SessionID",
+                    //    column: x => x.SessionID,
+                    //    principalTable: "ExamSessions",
+                    //    principalColumn: "SessionID",
+                    //    onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

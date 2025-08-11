@@ -26,6 +26,8 @@ builder.Services.AddScoped<IOptionService, OptionService>();
 //builder.Services.AddScoped<IExamSessionService, ExamSessionService>();
 builder.Services.AddScoped<IAnswerRepository, AnswerRepository>();
 builder.Services.AddScoped<AnswerService>();
+builder.Services.AddScoped<IResultRepository, ResultRepository>();
+builder.Services.AddScoped<IResultService, ResultService>();
 
 var app = builder.Build();
 

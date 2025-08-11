@@ -36,7 +36,7 @@ namespace OnlineExamSystem.Migrations
 
             migrationBuilder.RenameTable(
                 name: "Result",
-                newName: "Results");
+                newName: "Result");
 
             migrationBuilder.RenameColumn(
                 name: "optionID",
@@ -50,7 +50,7 @@ namespace OnlineExamSystem.Migrations
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Results",
-                table: "Results",
+                table: "Result",
                 column: "ResultID");
 
             migrationBuilder.AddForeignKey(
@@ -71,10 +71,10 @@ namespace OnlineExamSystem.Migrations
 
             migrationBuilder.DropPrimaryKey(
                 name: "PK_Results",
-                table: "Results");
+                table: "Result");
 
             migrationBuilder.RenameTable(
-                name: "Results",
+                name: "Result",
                 newName: "Result");
 
             migrationBuilder.RenameColumn(
