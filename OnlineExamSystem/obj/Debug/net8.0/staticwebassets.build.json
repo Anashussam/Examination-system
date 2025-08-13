@@ -1,12 +1,20 @@
 {
   "Version": 1,
-  "Hash": "tCMpmGQMfANq1ntwnA2WOaAcF+oliDor/ozyoJFT2k4=",
+  "Hash": "KBImQ6wGCfkd5TqrAfSvH1LSIyzDclAZ1Ycg1dckU88=",
   "Source": "OnlineExamSystem",
   "BasePath": "_content/OnlineExamSystem",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "OnlineExamSystem\\wwwroot",
+      "Source": "OnlineExamSystem",
+      "ContentRoot": "C:\\Users\\Anas Qadora\\Desktop\\Examination system\\OnlineExamSystem\\wwwroot\\",
+      "BasePath": "_content/OnlineExamSystem",
+      "Pattern": "**"
+    }
+  ],
   "Assets": [],
   "Endpoints": []
 }

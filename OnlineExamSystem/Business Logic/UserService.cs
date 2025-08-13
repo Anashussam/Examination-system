@@ -16,20 +16,24 @@ namespace OnlineExamSystem.Business_Logic
         {
             _repo = repo;
         }
-
-       private string HashPassword(string password)
+        public User GetUserById(int userId)
         {
-            using(var sha256 =SHA256.Create())
+            return _repo.Get(userId);
+        }
+        public IEnumerable<User> GetAllUsers()
+        {
+            return _repo.GetAllUsers();
+        }
+
+        private string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
             {
                 var bytes = Encoding.UTF8.GetBytes(password);
                 var hash = sha256.ComputeHash(bytes);
                 return Convert.ToBase64String(hash);
             }
         }
-
-
-
-
         public User Login(LoginModel model)
         {
             return _repo.GetEmailAndPassword(model.Email, model.Password);
@@ -55,7 +59,7 @@ namespace OnlineExamSystem.Business_Logic
                 return new OperationResult
                 {
                     Success = false,
-                    StatusCode= 409,
+                    StatusCode = 409,
                     Message = "Email already exists"
 
                 };
@@ -79,6 +83,14 @@ namespace OnlineExamSystem.Business_Logic
                 StatusCode = 200,
                 Message = "User registered successfully."
             };
+        }
+        public bool DeleteUser(int userId)
+        {
+            if (!_repo.Exists(userId))
+            {
+                return false;
+            }
+            return _repo.Delete(userId);
         }
     }
 }

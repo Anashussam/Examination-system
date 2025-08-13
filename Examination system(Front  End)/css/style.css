@@ -1,0 +1,332 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+
+:root {
+    --primary: #3498db;
+    --primary-dark: #2980b9;
+    --secondary: #2c3e50;
+    --accent: #e74c3c;
+    --success: #2ecc71;
+    --warning: #f39c12;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --gray: #95a5a6;
+    --border-radius: 8px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--dark);
+    line-height: 1.6;
+    direction: rtl;
+}
+
+
+.container {
+    max-width: 500px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin: 30px auto;
+    animation: fadeIn 0.5s ease;
+}
+
+h1, h2 {
+    color: var(--secondary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    border-radius: 3px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    color: var(--gray);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    padding-right: 40px;
+    border: 2px solid #e1e1e1;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: var(--transition);
+    outline: none;
+    background-color: var(--light);
+}
+
+input:focus, select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    background-color: white;
+}
+
+button {
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 10px;
+    box-shadow: var(--shadow);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.message {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 500;
+}
+
+.error-message {
+    color: var(--accent);
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.success-message {
+    color: var(--success);
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.options a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 14px;
+}
+
+.options a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+
+:root {
+    --primary: #3498db;
+    --primary-dark: #2980b9;
+    --secondary: #2c3e50;
+    --accent: #e74c3c;
+    --success: #2ecc71;
+    --warning: #f39c12;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --gray: #95a5a6;
+    --border-radius: 8px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--dark);
+    line-height: 1.6;
+    direction: rtl;
+}
+
+
+.dashboard-container {
+    max-width: 1000px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin: 30px auto;
+    animation: fadeIn 0.5s ease;
+}
+
+.dashboard-container h2 {
+    color: var(--secondary);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: right;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.dashboard-container h3 {
+    color: var(--primary);
+    margin: 25px 0 15px;
+    font-size: 1.4rem;
+}
+
+#logout-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-bottom: 20px;
+    float: left;
+}
+
+#logout-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+#subjects-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#subjects-list li {
+    background-color: white;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    border-right: 4px solid var(--primary);
+    position: relative;
+}
+
+#subjects-list li:hover {
+    transform: translateX(-5px);
+    background-color: var(--light);
+}
+
+#subjects-list li::before {
+    content: "\f02d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary);
+}
+
+#subjects-list li.loading {
+    text-align: center;
+    color: var(--gray);
+    font-style: italic;
+    border-right: 4px solid var(--gray);
+}
+
+
+
+
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    padding: 8px 15px;
+    box-shadow: var(--shadow);
+}
+
+.language-btn {
+    background: none;
+    border: none;
+    color: var(--dark);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.language-btn.active {
+    background: var(--primary);
+    color: white;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .language-switcher {
+        top: 10px;
+        left: 10px;
+        padding: 5px 10px;
+    }
+}

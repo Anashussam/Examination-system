@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="language-switcher">
+        <button id="arabic-btn" class="language-btn active">العربية</button>
+        <button id="english-btn" class="language-btn">English</button>
+    </div>
+    
+    <div class="container">
+        <h2>تسجيل الدخول</h2>
+        
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" placeholder="اسم المستخدم أو البريد الإلكتروني">
+        </div>
+        
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="كلمة المرور">
+        </div>
+        
+        <button onclick="login()">دخول</button>
+        <p id="error-message" class="message"></p>
+        
+        <div class="options">
+            <a href="register.html"><i class="fas fa-user-plus"></i> إنشاء حساب جديد</a>
+            <a href="#"><i class="far fa-check-circle"></i> تذكرني</a>
+        </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

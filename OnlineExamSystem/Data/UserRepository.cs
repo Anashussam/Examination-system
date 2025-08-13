@@ -1,4 +1,7 @@
-﻿using OnlineExamSystem.Models.Exams;
+﻿using Microsoft.EntityFrameworkCore;
+using OnlineExamSystem.Models.Exams;
+
+
 
 namespace OnlineExamSystem.Data
 {
@@ -16,6 +19,14 @@ namespace OnlineExamSystem.Data
             _Context.Users.Add(user);
             _Context.SaveChanges();
         }
+        public User Get(int id)
+        {
+            return _Context.Users.Include(u => u.Role).FirstOrDefault(u => u.UserID == id);
+        }
+        public IEnumerable<User> GetAllUsers()
+        {
+            return _Context.Users.Include(u => u.Role).ToList();
+        }
 
         public User GetByEmail(string email)
         {
@@ -24,11 +35,23 @@ namespace OnlineExamSystem.Data
 
         public User GetEmailAndPassword(string email, string password)
         {
-            return _Context.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
+            return _Context.Users
+                .Include(u => u.Role) 
+                .FirstOrDefault(u => u.Email == email && u.Password == password);
         }
+
+
         public bool Exists(int id)
         {
             return _Context.Users.Any(u => u.UserID == id);
+        }
+        public bool Delete(int id)
+        {
+            var user = Get(id);
+            if (user == null) return false;
+            _Context.Users.Remove(user);
+            _Context.SaveChanges();
+            return true;
         }
     }
 }

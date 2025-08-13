@@ -6,8 +6,6 @@ C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\obj\Debug\net8.
 C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\obj\Debug\net8.0\OnlineExamSystem.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\obj\Debug\net8.0\OnlineExamSystem.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\obj\Debug\net8.0\OnlineExamSystem.sourcelink.json
-C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\bin\Debug\net8.0\appsettings.json
 C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\bin\Debug\net8.0\OnlineExamSystem.staticwebassets.endpoints.json
 C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\bin\Debug\net8.0\OnlineExamSystem.exe
 C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\bin\Debug\net8.0\OnlineExamSystem.deps.json
@@ -171,3 +169,5 @@ C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\obj\Debug\net8.
 C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\obj\Debug\net8.0\OnlineExamSystem.pdb
 C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\obj\Debug\net8.0\OnlineExamSystem.genruntimeconfig.cache
 C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\obj\Debug\net8.0\ref\OnlineExamSystem.dll
+C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\bin\Debug\net8.0\OnlineExamSystem.staticwebassets.runtime.json
+C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\bin\Debug\net8.0\appsettings.json

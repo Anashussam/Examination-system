@@ -74,6 +74,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "OnlineExamSystem.Controllers.AuthController",
+    "Method": "GetUsers",
+    "RelativePath": "api/ExamSystem/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.AuthController",
+    "Method": "GetUserById",
+    "RelativePath": "api/ExamSystem/users/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.AuthController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/ExamSystem/users/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OnlineExamSystem.Controllers.OptionController",
     "Method": "AddOption",
     "RelativePath": "api/options",

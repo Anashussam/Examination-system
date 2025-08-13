@@ -1,0 +1,6 @@
+C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\wwwroot\css\dashboard.css
+C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\wwwroot\css\style.css
+C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\wwwroot\dashboard.html
+C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\wwwroot\index.html
+C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\wwwroot\js\auth.js
+C:\Users\Anas Qadora\Desktop\Examination system\OnlineExamSystem\wwwroot\js\dashboard.js

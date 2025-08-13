@@ -9,5 +9,9 @@ namespace OnlineExamSystem.Business_Logic
     {
         OperationResult Register(RegisterModel model);
         User Login(LoginModel model);
+        User GetUserById(int userId);
+        IEnumerable<User> GetAllUsers();
+
+        bool DeleteUser(int userId);
     }
 }

@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب جديد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>إنشاء حساب جديد</h2>
+        
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" placeholder="الاسم">
+        </div>
+        
+        <div class="input-group">
+            <i class="fas fa-calendar"></i>
+            <input type="number" id="age" placeholder="العمر">
+        </div>
+        
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="البريد الإلكتروني">
+        </div>
+        
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="كلمة المرور">
+        </div>
+        
+        <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="text" id="phone" placeholder="رقم الهاتف">
+        </div>
+        
+        <div class="input-group">
+            <i class="fas fa-user-tag"></i>
+            <select id="roleID">
+                <option value="1">طالب</option>
+                <option value="2">أدمن</option>
+                <option value="3">معلم</option>
+            </select>
+        </div>
+        
+        <button onclick="register()">تسجيل</button>
+        <p id="register-message" class="message"></p>
+    </div>
+
+    <script src="../js/register.js"></script>
+</body>
+</html>

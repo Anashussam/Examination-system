@@ -1,0 +1,6 @@
+wwwroot\css\dashboard.css
+wwwroot\css\style.css
+wwwroot\dashboard.html
+wwwroot\index.html
+wwwroot\js\auth.js
+wwwroot\js\dashboard.js
