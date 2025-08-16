@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الامتحانات - إضافة امتحان</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/exams.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h2 class="text-center">إضافة امتحان جديد</h2>
+            </div>
+        
+<div class="card-body">
+    <form id="examForm" class="needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="examTitle" class="form-label">عنوان الامتحان</label>
+            <input type="text" class="form-control" id="examTitle" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="subjectID" class="form-label">المادة</label>
+            <select class="form-select" id="subjectID" required>
+                <option value="">اختر المادة...</option>
+            </select>
+        </div>
+        
+        <div class="mb-3">
+            <label for="examDescription" class="form-label">الوصف</label>
+            <textarea class="form-control" id="examDescription" rows="3"></textarea>
+        </div>
+        
+        <div class="mb-3">
+            <label for="examDuration" class="form-label">المدة (دقائق)</label>
+            <input type="number" class="form-control" id="examDuration" min="1" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="examDifficulty" class="form-label">الصعوبة</label>
+            <select class="form-select" id="examDifficulty" required>
+                <option value="Easy">سهل</option>
+                <option value="Medium">متوسط</option>
+                <option value="Hard">صعب</option>
+            </select>
+        </div>
+        
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">حفظ الامتحان</button>
+            <a href="exams-list.html" class="btn btn-secondary">العودة إلى قائمة الامتحانات</a>
+            <a href="admin-dashboard.html" class="btn btn-primary">العودة إلى القائمة الرئيسية</a>
+        </div>
+    </form>
+</div>
+
+        </div>
+    </div>
+
+    <script src="../js/load-subjects.js"></script>
+    <script src="../js/add-exam.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

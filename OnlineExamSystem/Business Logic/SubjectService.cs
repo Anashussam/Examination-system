@@ -26,12 +26,26 @@ namespace OnlineExamSystem.Business_Logic
 
         public bool Add(Subject subject)
         {
-            if (_subjectRepository.Exists(subject.SubjectID))
-                return false;
+            // if (_subjectRepository.Exists(subject.SubjectID))
+            //     return false;
 
-            _subjectRepository.Add(subject);
-            return true;
-          //  return _subjectRepository.SaveChanges();
+            // _subjectRepository.Add(subject);
+            //// return true;
+            // return _subjectRepository.Save();
+
+            try
+            {
+                if (subject == null || subject.CreatedBy <= 0)
+                    return false;
+
+                _subjectRepository.Add(subject);
+                return _subjectRepository.Save(); // التأكد من حفظ التغييرات
+            }
+            catch
+            {
+                return false;
+            }
+
 
         }
         public bool Update(Subject subject)

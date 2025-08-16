@@ -48,7 +48,7 @@ function renderSubjects(subjects) {
         };
         list.appendChild(li);
     });
-}// زر تسجيل الخروج
+}
 document.getElementById("logout-btn").addEventListener("click", () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");

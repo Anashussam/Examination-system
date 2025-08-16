@@ -4,8 +4,10 @@ namespace OnlineExamSystem.Models.DTOs.Subjects
 {
     public class SubjectCreateDto
     {
+       
         [Required]
         [StringLength(100)]
+
         public string SubjectName { get; set; }
 
         [Required]
@@ -16,5 +18,6 @@ namespace OnlineExamSystem.Models.DTOs.Subjects
 
         [Required]
         public int CreatedBy { get; set; }
+
     }
 }

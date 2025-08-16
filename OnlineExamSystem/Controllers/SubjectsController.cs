@@ -2,6 +2,10 @@
 using OnlineExamSystem.Business_Logic.Interfaces;
 using OnlineExamSystem.Models.Subjects;
 using OnlineExamSystem.Models.DTOs.Subjects;
+using System.Security.Claims;
+using OnlineExamSystem.Data;
+using Microsoft.EntityFrameworkCore;
+using OnlineExamSystem.Models.Exams;
 
 
 namespace OnlineExamSystem.Controllers
@@ -12,11 +16,18 @@ namespace OnlineExamSystem.Controllers
         public class SubjectsController : ControllerBase
         {
             private readonly ISubjectService _subjectService;
-
-            public SubjectsController(ISubjectService subjectService)
-            {
-                _subjectService = subjectService;
-            }
+        private readonly ISubjectRepository _subjectRepository;
+        /// <summary>
+        /// Constructor for SubjectsController.
+        /// </summary>
+        /// <param name="subjectService">Service for managing subjects.</param>
+        /// 
+        public SubjectsController(ISubjectService subjectService, ISubjectRepository subjectRepository)
+        {
+            _subjectService = subjectService;
+            _subjectRepository = subjectRepository;
+        }
+        
 
 
             /// <summary>
@@ -37,9 +48,11 @@ namespace OnlineExamSystem.Controllers
                     SubjectID = s.SubjectID,
                     SubjectName = s.SubjectName,
                     Code = s.Code,
-                    Status = s.Status
+                    Status = s.Status,
+                    CreatedBy=s.CreatedBy 
+                    //GreatedByName = s.createdByUser?.Name ?? "Unknown"
                 });
-
+                    
                 return Ok(response);
             }
             catch (Exception ex)
@@ -65,7 +78,8 @@ namespace OnlineExamSystem.Controllers
                         SubjectID = subjectId.SubjectID,
                         SubjectName = subjectId.SubjectName,
                         Code = subjectId.Code,
-                        Status = subjectId.Status
+                        Status = subjectId.Status,
+                        CreatedBy=subjectId.CreatedBy
                     };
                 return Ok(response);
             }
@@ -80,6 +94,7 @@ namespace OnlineExamSystem.Controllers
             [HttpPost("AddSubject")]
         public IActionResult Add([FromBody] SubjectCreateDto dto)
         {
+            
             if (dto == null)
                 return BadRequest("Input cannot be null.");
 
@@ -88,32 +103,60 @@ namespace OnlineExamSystem.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
+                // التحقق من أن CreatedBy موجود وله قيمة صالحة
+                if (dto.CreatedBy <= 0)
+                    return BadRequest("Invalid CreatedBy value");
+
+                //var subject = new Subject
+                //{
+                //    SubjectName = dto.SubjectName,
+                //    Code = dto.Code,
+                //    Status = dto.Status,
+                //    CreatedBy = dto.CreatedBy
+                //};
                 var subject = new Subject
                 {
                     SubjectName = dto.SubjectName,
                     Code = dto.Code,
                     Status = dto.Status,
-                    CreatedBy = dto.CreatedBy
+                    CreatedBy = dto.CreatedBy,
                 };
 
-                var added = _subjectService.Add(subject);
-                if (!added)
-                    return Conflict(new { message = "Subject already exists" });
+                _subjectRepository.Add(subject);
+
+                // حفظ التغييرات مباشرة مع التحقق من النجاح
+                if (!_subjectRepository.Save())
+                {
+                    return StatusCode(500, "Failed to save subject to database");
+                }
 
                 var response = new SubjectResponseDto
                 {
-                    SubjectID = subject.SubjectID,
+                    SubjectID = subject.SubjectID, // يجب أن يكون SubjectID موجودًا في الكائن subject بعد الحفظ
                     SubjectName = subject.SubjectName,
                     Code = subject.Code,
-                    Status = subject.Status
+                    Status = subject.Status,
+                    CreatedBy = subject.CreatedBy
                 };
-
-                return CreatedAtAction(nameof(GetById), new { id = response.SubjectID }, response);
+                //return CreatedAtAction(nameof(GetById), new { id = subject.SubjectID }, response);
+               return CreatedAtAction(nameof(GetById), new { id = response.SubjectID }, response);
+            }
+            catch (DbUpdateException dbEx)
+            {
+                // معالجة أخطاء قاعدة البيانات بشكل خاص
+                return Problem(
+                    detail: "Database error: " + dbEx.InnerException?.Message,
+                    statusCode: 500,
+                    title: "Database Error");
             }
             catch (Exception ex)
             {
-                return Problem(detail: ex.Message, statusCode: 500, title: "Error Adding Subject");
+                return Problem(
+                    detail: ex.Message,
+                    statusCode: 500,
+                    title: "Error Adding Subject");
             }
+
         }
 
         /// <summary>
@@ -152,7 +195,7 @@ namespace OnlineExamSystem.Controllers
         /// <summary>
         /// Delete a subject by its ID.
         /// </summary>
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteSubject/{id}")]
             public IActionResult Delete(int id)
             {
                 try

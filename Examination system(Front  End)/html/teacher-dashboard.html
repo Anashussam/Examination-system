@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,11 @@
             text-align: center;
             padding: 30px;
         }
-        h1 { color: #333; }
+
+        h1 {
+            color: #333;
+        }
+
         button {
             padding: 10px 20px;
             background: red;
@@ -20,14 +25,23 @@
             cursor: pointer;
             border-radius: 5px;
         }
-        button:hover { background: darkred; }
+
+        button:hover {
+            background: darkred;
+        }
     </style>
+    <script src="../js/auth-guard.js"></script>
+    <script>
+        protectPage(["teacher", "admin"]);
+    </script>
 </head>
+
 <body>
     <h1 id="teacher-name">مرحبًا، معلم</h1>
     <p>هذه لوحة تحكم المعلم. لاحقًا سنضيف هنا إدارة المواد والامتحانات.</p>
     <button onclick="logout()">تسجيل الخروج</button>
-
+    <script src="../js/logout.js"></script>
     <script src="../js/teacher.js"></script>
 </body>
+
 </html>

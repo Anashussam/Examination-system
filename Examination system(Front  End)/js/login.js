@@ -1,4 +1,5 @@
 
+
 const translations = {
     ar: {
         usernamePlaceholder: "اسم المستخدم أو البريد الإلكتروني",
@@ -22,7 +23,6 @@ const translations = {
     }
 };
 
-
 function setLanguage(lang) {
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.lang = lang;
@@ -30,11 +30,11 @@ function setLanguage(lang) {
     document.querySelector('h2').textContent = lang === 'ar' ? 'تسجيل الدخول' : 'Login';
     document.getElementById('username').placeholder = translations[lang].usernamePlaceholder;
     document.getElementById('password').placeholder = translations[lang].passwordPlaceholder;
-    document.querySelector('button').textContent = translations[lang].loginButton;
-    document.querySelector('.options a:first-child').innerHTML = lang === 'ar'
+    document.getElementById('btn').value = translations[lang].loginButton;
+    document.querySelector('.group a:first-child').innerHTML = lang === 'ar'
         ? '<i class="fas fa-user-plus"></i> إنشاء حساب جديد'
         : '<i class="fas fa-user-plus"></i> Create new account';
-    document.querySelector('.options a:last-child').innerHTML = lang === 'ar'
+    document.querySelector('.group a:last-child').innerHTML = lang === 'ar'
         ? '<i class="far fa-check-circle"></i> تذكرني'
         : '<i class="far fa-check-circle"></i> Remember me';
 
@@ -43,6 +43,7 @@ function setLanguage(lang) {
 
     localStorage.setItem('selectedLanguage', lang);
 }
+
 async function login() {
     const email = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value.trim();

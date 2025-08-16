@@ -1,33 +1,64 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لوحة تحكم الأدمن</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-            text-align: center;
-            padding: 30px;
-        }
-        h1 { color: #333; }
-        button {
-            padding: 10px 20px;
-            background: red;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover { background: darkred; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+    <script src="../js/auth-guard.js"></script>
+    <script>
+        protectPage(["admin"]);
+    </script>
 </head>
-<body>
-    <h1 id="admin-name">مرحبًا، أدمن</h1>
-    <p>هذه لوحة تحكم الأدمن. لاحقًا سنضيف هنا إدارة المواد والامتحانات.</p>
-    <button onclick="logout()">تسجيل الخروج</button>
+<body class="admin-dashboard">
+    <header class="admin-header">
+        <h1 id="admin-name"><i class="fas fa-user-shield"></i> لوحة تحكم الأدمن</h1>
+        <p>مرحبًا بك في مركز التحكم، يمكنك إدارة جميع جوانب النظام من هنا</p>
+    </header>
 
+    <div class="dashboard-grid">
+      
+        <div class="dashboard-card card-subjects">
+            <i class="fas fa-book fa-3x" style="color: #2ecc71;"></i>
+            <h3>إدارة المواد</h3>
+            <p>عرض، إضافة، تعديل أو حذف المواد الدراسية</p>
+            <div class="card-actions">
+                <a href="subjects-list.html" class="btn"><i class="fas fa-list"></i> عرض المواد</a>
+                <a href="add-subject.html" class="btn" style="margin-top: 0.5rem;"><i class="fas fa-plus"></i> إضافة مادة</a>
+            </div>
+        </div>
+
+        
+        <div class="dashboard-card card-exams">
+            <i class="fas fa-clipboard-list fa-3x" style="color: #9b59b6;"></i>
+            <h3>إدارة الامتحانات</h3>
+            <p>إنشاء وتنظيم الامتحانات المختلفة</p>
+            <a href="exams-list.html" class="btn"><i class="fas fa-list"></i> عرض الامتحانات</a>
+        </div>
+
+       
+        <div class="dashboard-card card-users">
+            <i class="fas fa-users fa-3x" style="color: #f39c12;"></i>
+            <h3>إدارة المستخدمين</h3>
+            <p>عرض وتعديل حسابات المستخدمين</p>
+            <a href="users-list.html" class="btn"><i class="fas fa-list"></i> عرض المستخدمين</a>
+        </div>
+
+      
+        <div class="dashboard-card card-questions">
+            <i class="fas fa-question-circle fa-3x" style="color: #1abc9c;"></i>
+            <h3>إدارة الأسئلة</h3>
+            <p>إضافة وتعديل بنك الأسئلة</p>
+            <a href="questions-list.html" class="btn"><i class="fas fa-list"></i> عرض الأسئلة</a>
+        </div>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+    </button>
+
+    <script src="../js/logout.js"></script>
     <script src="../js/admin.js"></script>
 </body>
 </html>

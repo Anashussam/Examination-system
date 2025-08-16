@@ -1,4 +1,5 @@
-﻿using OnlineExamSystem.Models.Exams;
+﻿using Microsoft.EntityFrameworkCore;
+using OnlineExamSystem.Models.Exams;
 
 namespace OnlineExamSystem.Data
 {
@@ -11,11 +12,20 @@ namespace OnlineExamSystem.Data
         }
         public IEnumerable<Exam> GetAll()
         {
-            return _context.Exams.ToList();
+            //return _context.Exams.ToList();\
+            return _context.Exams
+                .Include(e => e.Subject)
+                .Include(e => e.CreatedByUser)
+                .ToList();
         }
         public Exam GetById(int id)
         {
-            return _context.Exams.FirstOrDefault(e => e.ExamID == id);
+            //return _context.Exams.FirstOrDefault(e => e.ExamID == id);
+            return _context.Exams
+               .Include(e => e.Subject)
+               .Include(e => e.CreatedByUser)
+               .FirstOrDefault(e => e.ExamID == id);
+          
         }
         public void Add(Exam exam)
         {

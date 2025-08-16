@@ -749,7 +749,7 @@
         }
       }
     },
-    "/api/Subjects/{id}": {
+    "/api/Subjects/DeleteSubject/{id}": {
       "delete": {
         "tags": [
           "Subjects"
@@ -817,6 +817,10 @@
             "nullable": true
           },
           "subjectName": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdByName": {
             "type": "string",
             "nullable": true
           }

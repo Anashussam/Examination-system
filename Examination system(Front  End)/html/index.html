@@ -6,35 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تسجيل الدخول</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleLogin.css">
 </head>
 <body>
-    <div class="language-switcher">
-        <button id="arabic-btn" class="language-btn active">العربية</button>
-        <button id="english-btn" class="language-btn">English</button>
-    </div>
-    
-    <div class="container">
-        <h2>تسجيل الدخول</h2>
-        
-        <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" id="username" placeholder="اسم المستخدم أو البريد الإلكتروني">
+    <section>
+        <div class="leaves">
+            <div class="set">
+                <div><img src="../images/leaf_01.png"></div>
+                <div><img src="../images/leaf_02.png"></div>
+                <div><img src="../images/leaf_03.png"></div>
+                <div><img src="../images/leaf_04.png"></div>
+                 <div><img src="../images/leaf_01.png"></div>
+                <div><img src="../images/leaf_02.png"></div>
+                <div><img src="../images/leaf_03.png"></div>
+                <div><img src="../images/leaf_04.png"></div>
+            </div>
+        </div>
+        <img src="../images/bg.jpg" class="bg">
+        <img src="../images/girl.png" class="girl">
+        <img src="../images/trees.png" class="trees">
+
+        <div class="language-switcher">
+            <button id="arabic-btn" class="language-btn active">العربية</button>
+            <button id="english-btn" class="language-btn">English</button>
         </div>
         
-        <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" id="password" placeholder="كلمة المرور">
+        <div class="login">
+            <h2>تسجيل الدخول</h2>
+            
+            <div class="inputBox">
+                <input type="text" id="username" placeholder="اسم المستخدم أو البريد الإلكتروني">
+            </div>
+            
+            <div class="inputBox">
+                <input type="password" id="password" placeholder="كلمة المرور">
+            </div>
+            
+            <div class="inputBox">
+                <input type="submit" value="دخول" id="btn" onclick="login()">
+            </div>
+            
+            <p id="error-message" class="message"></p>
+            
+            <div class="group">
+                <a href="register.html"><i class="fas fa-user-plus"></i> إنشاء حساب جديد</a>
+                <a href="#"><i class="far fa-check-circle"></i> تذكرني</a>
+            </div>
         </div>
-        
-        <button onclick="login()">دخول</button>
-        <p id="error-message" class="message"></p>
-        
-        <div class="options">
-            <a href="register.html"><i class="fas fa-user-plus"></i> إنشاء حساب جديد</a>
-            <a href="#"><i class="far fa-check-circle"></i> تذكرني</a>
-        </div>
-    </div>
+    </section>
 
     <script src="../js/login.js"></script>
 </body>

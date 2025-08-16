@@ -18,6 +18,8 @@
 //        public User CreatedByUser { get; set; }
 //    }
 //}
+using System;
+using OnlineExamSystem.Models.Subjects;
 namespace OnlineExamSystem.Models.Exams
 {
     public class Exam
@@ -36,7 +38,7 @@ namespace OnlineExamSystem.Models.Exams
         public DateTime CreatedAt { get; set; }
 
         // Navigation Properties
-        public OnlineExamSystem.Models.Subjects.Subject Subject { get; set; }
+        public Subject Subject { get; set; }
         public User CreatedByUser { get; set; }
     }
 }

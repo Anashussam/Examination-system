@@ -20,17 +20,19 @@ namespace OnlineExamSystem.Data
         {
             return _context.Subjects
                 .Include(s => s.Exams)
-                .Include(s => s.createdByUser) 
+                
                 .ToList();
         }
+
 
         public Subject GetById(int id)
         {
             return _context.Subjects
                 .Include(s => s.Exams)
-                .Include(s => s.createdByUser) 
                 .FirstOrDefault(s => s.SubjectID == id);
         }
+
+
 
         public void Add(Subject subject)
         {
@@ -56,7 +58,17 @@ namespace OnlineExamSystem.Data
 
         public bool Save()
         {
-            return _context.SaveChanges() > 0;
+            //return _context.SaveChanges() > 0;
+            try
+            {
+                var changes = _context.SaveChanges();
+                return changes > 0;
+            }
+            catch (Exception ex)
+            {
+                // يمكنك تسجيل الخطأ هنا إذا كنت تستخدم نظام logging
+                return false;
+            }
         }
     }
 }

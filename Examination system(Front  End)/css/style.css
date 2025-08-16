@@ -306,6 +306,9 @@ body {
     background: var(--primary);
     color: white;
 }
+
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;

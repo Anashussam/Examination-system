@@ -360,22 +360,6 @@
   },
   {
     "ContainingType": "OnlineExamSystem.Controllers.SubjectsController",
-    "Method": "Delete",
-    "RelativePath": "api/Subjects/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "OnlineExamSystem.Controllers.SubjectsController",
     "Method": "Add",
     "RelativePath": "api/Subjects/AddSubject",
     "HttpMethod": "POST",
@@ -385,6 +369,22 @@
       {
         "Name": "dto",
         "Type": "OnlineExamSystem.Models.DTOs.Subjects.SubjectCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineExamSystem.Controllers.SubjectsController",
+    "Method": "Delete",
+    "RelativePath": "api/Subjects/DeleteSubject/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
